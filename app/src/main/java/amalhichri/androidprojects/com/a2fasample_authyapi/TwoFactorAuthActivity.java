@@ -10,8 +10,10 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.android.volley.Request;
+import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -20,12 +22,18 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import amalhichri.androidprojects.com.Utils.AppSingleton;
 
 public class TwoFactorAuthActivity extends AppCompatActivity {
 
-    private String email,password,username,phoneNumber,countryCode,addUserUrl;
+    private String email,password,username,phoneNumber,countryCode,addUserUrl,qrCodeCallUrl;
+    private static String addedUserId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,37 +50,56 @@ public class TwoFactorAuthActivity extends AppCompatActivity {
         }
 
 
-        /** 2FA  work goes here **/
-
-                /** 1.Ask the user for their phone number **/
-        phoneNumber =((EditText)findViewById(R.id.phoneNumber)).getText().toString();
-        countryCode ="216";
-        addUserUrl  = "https://api.authy.com/protected/json/users/new?user[email]="+email
-                +"&user[cellphone]="+phoneNumber
-                +"&user[country_code]="+countryCode+"&api_key=CCb8fPiHfTdFp332cefjTuRjgMNprVOx";
-
-
         /************** Using an authentication app in another device ******************/
         (findViewById(R.id.twofaViaPhone2nd)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+                /** 1.Ask the user for their phone number **/
+
+                phoneNumber =((EditText)findViewById(R.id.phoneNumber)).getText().toString();
+                countryCode =((com.hbb20.CountryCodePicker)findViewById(R.id.countryCodePicker)).getSelectedCountryCode();
+
+                addUserUrl  = "https://api.authy.com/protected/json/users/new?user[email]="+email
+                        +"&user[cellphone]="+phoneNumber
+                        +"&user[country_code]="+countryCode+"&api_key=CCb8fPiHfTdFp332cefjTuRjgMNprVOx";
+
                 /** 2.Add the user to the Authy API **/
 
-                StringRequest strReq = new StringRequest(Request.Method.GET,
-                        addUserUrl, new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        Log.d("Call Passed:", response.toString());
-                    }
-                }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Log.e("ERROR", error.getMessage());
-                    }
-                });
-                AppSingleton.getInstance(getApplicationContext()).addToRequestQueue(strReq);
+                JSONObject obj = new JSONObject();
+                RequestQueue queue =  AppSingleton.getInstance(getApplicationContext()).getRequestQueue();
+                // post call for Authy api to add a user that return the added user's id
+                JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.POST,addUserUrl,obj,
+                        new Response.Listener<JSONObject>() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+                                Gson gson = new Gson();
+                                try {
+                                    // get the returned id
+                                    JsonObject addedUser = gson.fromJson(response.getString("user"),JsonObject.class);
+                                    addedUserId = (addedUser.get("id")).getAsString();
+                                    Toast.makeText(getApplicationContext(), "Res: "+addedUserId, Toast.LENGTH_LONG).show();
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        },
+                        new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+                                Log.e("ERROR! ",error.getMessage());
+                            }
+                        });
+                queue.add(jsObjRequest);
+
                 /** 3.Call the Authy API to generate a QRCode **/
-                 // qr code work goes here
+                // and pass it to next activity because it will be user
+                qrCodeCallUrl="https://api.authy.com/protected/json/users/"+addedUserId+
+                        "/secret?api_key=CCb8fPiHfTdFp332cefjTuRjgMNprVOx";
+                Intent qrCodeIntent = new Intent(getApplicationContext(), QRCodeActivity.class);
+                qrCodeIntent.putExtra("qrCodeCallUrl",qrCodeCallUrl);
+                startActivity(qrCodeIntent);
 
             }
         });

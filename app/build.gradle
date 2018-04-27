@@ -39,6 +39,9 @@ dependencies {
     // volley
     compile 'com.mcxiaoke.volley:library-aar:1.0.0'
 
+    // to deserialize/serialize json ibjects returned by Authy
+    compile 'com.google.code.gson:gson:2.8.2'
+
 
 }
 apply plugin: 'com.google.gms.google-services'
