@@ -42,6 +42,10 @@ dependencies {
     // to deserialize/serialize json ibjects returned by Authy
     compile 'com.google.code.gson:gson:2.8.2'
 
+    // to set imageView src
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+
 
 }
 apply plugin: 'com.google.gms.google-services'
