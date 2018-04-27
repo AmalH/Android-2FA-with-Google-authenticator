@@ -80,7 +80,7 @@ public class QRCodeActivity extends AppCompatActivity {
                             @Override
                             public void onResponse(JSONObject response) {
                                 try {
-                                    if((response.getString("success")).equals("true"))
+                                    if((response.getString("toker")).equals("is valid"))
                                         Toast.makeText(getApplicationContext(), "Registered: ", Toast.LENGTH_LONG).show();
                                     else
                                         Toast.makeText(getApplicationContext(), "Not registered!", Toast.LENGTH_LONG).show();
