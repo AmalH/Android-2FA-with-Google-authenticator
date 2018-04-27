@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SigninActivity" />
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".TwoFactorAuthActivity"></activity>
     </application>
 
 </manifest>

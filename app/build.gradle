@@ -33,6 +33,8 @@ dependencies {
     // firebase database
     compile 'com.google.firebase:firebase-database:11.8.0'
 
+    // country code picker
+    implementation 'com.hbb20:ccp:2.2.0'
 
 }
 apply plugin: 'com.google.gms.google-services'
