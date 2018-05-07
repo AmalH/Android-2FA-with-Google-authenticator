@@ -202,7 +202,6 @@ Tutorial: [Android - Implementing two-step authentication through SMS code](http
                         throw databaseError.toException();
                     }
                 });
-                //countryCode =((com.hbb20.CountryCodePicker)findViewById(R.id.countryCodePicker)).getSelectedCountryCode();
             }
         });       
 ```
