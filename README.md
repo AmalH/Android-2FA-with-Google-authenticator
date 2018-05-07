@@ -10,7 +10,8 @@ You can use this project and the following tutorials to implement:
 	
 ![2faQr](https://raw.githubusercontent.com/AmalH/Android-2FA-with-Google-authenticator/master/screenshots/2fagoogleAuthenticator1.png)
 
-	* Code snippet:
+Tutorial: [Authy API](https://www.twilio.com/docs/authy/api)
+
 ```Java
     /** get auth creds from previous activity **/
         Bundle extras = getIntent().getExtras();
@@ -53,9 +54,6 @@ You can use this project and the following tutorials to implement:
         });
 ```
 	
-	
-    * Tutorial:
-	[Authy API](https://www.twilio.com/docs/authy/api)
 
 * ### Two-factor authentication using Google authenticator on user device
     * Code snippet:
