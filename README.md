@@ -9,7 +9,7 @@ You can use this project and the following tutorials to implement:
 
 	Tutorial: [Android - Implementing two-step authentication through Google authenticator](https://www.pragmatictheories.tech/android-implementing-two-step-authentication-through-google-authenticator)
 <p align="center">
-![2faQr](https://raw.githubusercontent.com/AmalH/Android-2FA-with-Google-authenticator/master/screenshots/2fagoogleAuthenticator1.png)
+<img src="https://raw.githubusercontent.com/AmalH/Android-2FA-with-Google-authenticator/master/screenshots/2fagoogleAuthenticator1.png"/>
 </p>
 
 ```Java
