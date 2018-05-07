@@ -6,7 +6,10 @@ This is a sample for implementing two-factor authentication in Android using [Au
 You can use this project and the following tutorials to implement:
 
 * ### Two-factor authentication using Google authenticator on a different device (using QR codes)
+
+	* Screenshot:
 ![2faQr](https://raw.githubusercontent.com/AmalH/Android-2FA-with-Google-authenticator/master/screenshots/2fagoogleAuthenticator1.png)
+
 	* Code snippet:
 ```Java
     /** get auth creds from previous activity **/
@@ -49,8 +52,7 @@ You can use this project and the following tutorials to implement:
             }
         });
 ```
-
-
+	
 	
     * Tutorial:
 	[Authy API](https://www.twilio.com/docs/authy/api)
