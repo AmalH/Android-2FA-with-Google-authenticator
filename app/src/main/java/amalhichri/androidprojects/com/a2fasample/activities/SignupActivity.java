@@ -1,6 +1,7 @@
 package amalhichri.androidprojects.com.a2fasample.activities;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -15,6 +16,7 @@ import com.hbb20.CountryCodePicker;
 
 import amalhichri.androidprojects.com.a2fasample.R;
 import amalhichri.androidprojects.com.a2fasample.utils.Statics;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class SignupActivity extends Activity {
 
@@ -113,7 +115,17 @@ public class SignupActivity extends Activity {
     }
 
 
-    //
+
+    /*****************************************************************************
+     * * Utils
+     * **************************************************************************/
+
+    /** for calligraphy lib usage **/
+    @Override
+    protected void attachBaseContext(Context newBase) {
+      super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
+
     private boolean isFullName(String s){
         int j=0;
         for(int i=0;i<s.length();i++){

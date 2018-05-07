@@ -13,10 +13,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Signup ..."
         android:layout_marginTop="25dp"
         android:gravity="center"
-        android:textSize="40dp"/>
+        android:textSize="40dp"
+        android:text="Signup ..."
+        fontPath="fonts/graublau_slab.ttf"
+        tools:ignore="MissingPrefix" />
+
+
     <!-- form -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -104,7 +108,6 @@
         </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
 
         <Button
-            fontPath="fonts/graublau_slab.ttf"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
@@ -115,6 +118,7 @@
             android:text="Sign up"
             android:textSize="8pt"
             android:textStyle="bold"
+            fontPath="fonts/graublau_slab.ttf"
             tools:ignore="MissingPrefix" />
         <TextView
             android:id="@+id/navToSignin"

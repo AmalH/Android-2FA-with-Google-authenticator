@@ -1,6 +1,7 @@
 package amalhichri.androidprojects.com.a2fasample.activities;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -20,6 +21,7 @@ import org.json.JSONObject;
 import amalhichri.androidprojects.com.a2fasample.R;
 import amalhichri.androidprojects.com.a2fasample.utils.AppSingleton;
 import amalhichri.androidprojects.com.a2fasample.utils.Statics;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class QRCodeActivity extends Activity {
 
@@ -69,5 +71,11 @@ public class QRCodeActivity extends Activity {
                         ((EditText)findViewById(R.id.validationCode)),((TextView)findViewById(R.id.errorTxt)));
             }
         });
+    }
+
+    /** for calligraphy lib usage **/
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 }

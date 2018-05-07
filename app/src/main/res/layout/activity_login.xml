@@ -19,7 +19,9 @@
         android:text="Login ..."
         android:layout_marginTop="25dp"
         android:gravity="center"
-        android:textSize="40dp"/>
+        android:textSize="40dp"
+        fontPath="fonts/graublau_slab.ttf"
+        tools:ignore="MissingPrefix" />
 
     <!-- form -->
     <LinearLayout
@@ -87,7 +89,9 @@
             android:layout_marginTop="35px"
             android:text="Not a Chainer yet ? Join now."
             android:textSize="8pt"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            fontPath="fonts/graublau_slab.ttf"
+            tools:ignore="MissingPrefix" />
     </LinearLayout>
 
 

@@ -1,6 +1,7 @@
 package amalhichri.androidprojects.com.a2fasample.activities;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -22,6 +23,7 @@ import amalhichri.androidprojects.com.a2fasample.R;
 import amalhichri.androidprojects.com.a2fasample.models.User;
 import amalhichri.androidprojects.com.a2fasample.utils.Enable2FAdialog;
 import amalhichri.androidprojects.com.a2fasample.utils.Statics;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 
 public class LoginActivity extends Activity {
@@ -113,6 +115,12 @@ public class LoginActivity extends Activity {
                         }
                     });
         }
+    }
+
+    /** for calligraphy lib usage **/
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
 }
