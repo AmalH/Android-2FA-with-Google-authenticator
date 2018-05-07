@@ -5,16 +5,18 @@ This is a sample for implementing two-factor authentication in Android using [Au
 
 You can use this project and the following tutorials to implement:
 
-* ### Two-factor authentication using Google authenticator on user device
-    * Code snippet:
+* ### Two-factor authentication using Google authenticator on a different device (using QR codes)
+	* Code snippet:
 ```javascript
 ..................
 ```
     * Screenshot:
+	[2faQr](https://raw.githubusercontent.com/AmalH/Android-2FA-with-Google-authenticator/master/screenshots/2fagoogleAuthenticator1.png)
+	
     * Tutorial:
 
-* ### Two-factor authentication using Google authenticator on a different device (using QR codes)
-	* Code snippet:
+* ### Two-factor authentication using Google authenticator on user device
+    * Code snippet:
 ```javascript
 ..................
 ```
@@ -27,6 +29,7 @@ You can use this project and the following tutorials to implement:
 ..................
 ```
     * Screenshot:
+	
     * Tutorial:
 
 ## Getting started

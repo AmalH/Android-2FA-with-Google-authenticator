@@ -36,8 +36,8 @@
                 android:layout_height="wrap_content"
                 android:singleLine="false"
                 android:textColor="#7e7e7e"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
                 android:text="Authentication apps such as Google Authenticator and Authy"
                 fontPath="fonts/open_sans_light.ttf"
                 android:textSize="6pt"
@@ -98,7 +98,7 @@
                     android:textStyle="bold"
                     android:text="On this phone"
                     android:textColor="#3f3f3f"
-                    android:textSize="8pt"
+                    android:textSize="8.5pt"
                     tools:ignore="MissingPrefix" />
 
                 <TextView
@@ -110,7 +110,7 @@
                     android:layout_toRightOf="@id/icon1"
                     android:paddingRight="20dp"
                     android:singleLine="false"
-                    fontPath="fonts/open_sans_light.ttf"
+                    fontPath="fonts/open_sans_regular.ttf"
                     android:textSize="5.5pt"
                     tools:ignore="MissingPrefix" />
             </RelativeLayout>
@@ -140,9 +140,9 @@
                     android:layout_marginLeft="15dp"
                     android:text="On a different device"
                     android:textStyle="bold"
-                    fontPath="fonts/open_sans_regular.ttf"
+                    fontPath="fonts/graublau_slab.ttf"
                     android:textColor="#3f3f3f"
-                    android:textSize="7pt"
+                    android:textSize="8.5pt"
                     tools:ignore="MissingPrefix" />
 
                 <TextView

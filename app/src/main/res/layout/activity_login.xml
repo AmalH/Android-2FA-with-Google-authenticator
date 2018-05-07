@@ -5,9 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="16dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
+    android:padding="16dp"
     android:gravity="center_horizontal">
 
 
@@ -15,29 +13,29 @@
         android:id="@+id/signinHeaderText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:text="Login ..."
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
         android:gravity="center"
         android:textSize="40dp"
+        android:textColor="#2a2a2a"
         fontPath="fonts/graublau_slab.ttf"
-        tools:ignore="MissingPrefix" />
+        tools:ignore="MissingPrefix"/>
 
     <!-- form -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="10dp"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
-        android:layout_below="@id/signinHeaderText">
+        android:layout_centerVertical="true">
 
         <EditText
             android:id="@+id/emailLoginTxt"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="20dp"
             android:hint=" E-mail"
             android:paddingLeft="20dp"
             android:background="@drawable/editextborder"/>
@@ -67,19 +65,6 @@
             android:textSize="9pt"
             android:textStyle="bold"
             tools:ignore="MissingPrefix" />
-
-        <TextView
-            android:id="@+id/recoverTxtVw"
-            style="bold"
-            fontPath="fonts/graublau_slab.ttf"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20px"
-            android:onClick="resetPassword"
-            android:text="Forgot password?"
-            android:textSize="7.5pt"
-            tools:ignore="MissingPrefix" />
         <TextView
             android:id="@+id/signUpTxtVw"
             style="bold"
@@ -88,12 +73,11 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="35px"
             android:text="Not a Chainer yet ? Join now."
-            android:textSize="8pt"
+            android:textSize="8.5pt"
             android:textStyle="bold"
+            android:textColor="#2a2a2a"
             fontPath="fonts/graublau_slab.ttf"
             tools:ignore="MissingPrefix" />
     </LinearLayout>
-
-
 
 </RelativeLayout>

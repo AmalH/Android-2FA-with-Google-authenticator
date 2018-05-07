@@ -16,12 +16,12 @@
         android:layout_marginTop="25dp"
         android:gravity="center"
         android:textSize="40dp"
-        android:text="Signup ..."
+        android:textColor="#2a2a2a"
         fontPath="fonts/graublau_slab.ttf"
-        tools:ignore="MissingPrefix" />
+        tools:ignore="MissingPrefix"
+        android:text="Signup ..." />
 
 
-    <!-- form -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,7 +34,7 @@
             android:layout_width="match_parent"
             android:hint=" email"
             android:layout_height="50dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:paddingLeft="20dp"
@@ -43,7 +43,7 @@
         <EditText
             android:id="@+id/fullNameTxt"
             android:layout_width="match_parent"
-            android:hint=" Useuname"
+            android:hint=" username"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="5dp"
@@ -67,8 +67,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Enable two factor authentication on login"
-            android:textSize="7pt"
-            android:layout_marginTop="25dp"/>
+            fontPath="fonts/graublau_slab.ttf"
+            android:textSize="8pt"
+            android:layout_marginTop="25dp"
+            tools:ignore="MissingPrefix" />
         <com.github.aakira.expandablelayout.ExpandableRelativeLayout
             android:id="@+id/phnNbrLayout"
             android:layout_width="wrap_content"
@@ -84,7 +86,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="Phone number required :"/>
+                    android:paddingBottom="5dp"
+                    android:textStyle="bold"
+                    fontPath="fonts/graublau_slab.ttf"
+                    android:text="Phone number required :"
+                    tools:ignore="MissingPrefix" />
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -116,18 +122,23 @@
             android:background="@drawable/button_background"
             android:onClick="signUp"
             android:text="Sign up"
-            android:textSize="8pt"
+            android:textSize="9pt"
             android:textStyle="bold"
+            android:textColor="#2a2a2a"
             fontPath="fonts/graublau_slab.ttf"
             tools:ignore="MissingPrefix" />
         <TextView
             android:id="@+id/navToSignin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:textSize="8pt"
+            android:layout_marginTop="15dp"
+            android:textSize="8.5pt"
             android:textStyle="bold"
-            android:text="Already a member? Signin"/>
+            android:textColor="#2a2a2a"
+            android:text="Already a member? Signin"
+            fontPath="fonts/graublau_slab.ttf"
+            tools:ignore="MissingPrefix" />
+
     </LinearLayout>
 
 
