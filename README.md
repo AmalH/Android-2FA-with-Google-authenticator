@@ -13,7 +13,7 @@ You can use this project and the following tutorials to implement:
 
 
 ```Java
-    /** get auth creds from previous activity **/
+/** get auth creds from previous activity **/
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             userId= extras.getString("userId");
@@ -52,6 +52,7 @@ You can use this project and the following tutorials to implement:
                         ((EditText)findViewById(R.id.validationCode)),((TextView)findViewById(R.id.errorTxt)));
             }
         });
+    
 ```
 	
 
@@ -65,8 +66,8 @@ You can use this project and the following tutorials to implement:
 ```java
 /*************************************************************************************************
          *                       2FA using Authenticator app on this device *
-         *  **********************************************************************************************/
-        (findViewById(R.id.authAppOnThisPhone)).setOnClickListener(new View.OnClickListener() {
+*  **********************************************************************************************/
+(findViewById(R.id.authAppOnThisPhone)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Statics.usersTable.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -131,7 +132,7 @@ You can use this project and the following tutorials to implement:
                     }
                 });
             }
-        });
+        });        
 ```
  
 
@@ -144,8 +145,8 @@ Tutorial: [Android - Implementing two-step authentication through SMS code](http
 ```java
 /*************************************************************************************************
          *                      2FA using text messages *
-         *  **********************************************************************************************/
-        (findViewById(R.id.smsOptionLyt)).setOnClickListener(new View.OnClickListener() {
+*  **********************************************************************************************/
+ (findViewById(R.id.smsOptionLyt)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dismiss();
@@ -201,7 +202,7 @@ Tutorial: [Android - Implementing two-step authentication through SMS code](http
                 });
                 //countryCode =((com.hbb20.CountryCodePicker)findViewById(R.id.countryCodePicker)).getSelectedCountryCode();
             }
-        });
+        });       
 ```
 
 ## Getting started
