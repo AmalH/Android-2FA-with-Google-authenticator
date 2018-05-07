@@ -133,6 +133,7 @@
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
+        android:textColor="#2a2a2a"
         android:backgroundTint="#50303F9F"
         android:background="@drawable/button_background"
         fontPath="fonts/gopen_sans_light.ttf"

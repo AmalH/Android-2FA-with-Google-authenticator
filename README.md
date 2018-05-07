@@ -11,10 +11,10 @@ You can use this project and the following tutorials to implement:
 ..................
 ```
     * Screenshot:
-	
 ![2faQr](https://raw.githubusercontent.com/AmalH/Android-2FA-with-Google-authenticator/master/screenshots/2fagoogleAuthenticator1.png)
 	
     * Tutorial:
+	[Authy API](https://www.twilio.com/docs/authy/api)
 
 * ### Two-factor authentication using Google authenticator on user device
     * Code snippet:
