@@ -7,7 +7,7 @@ You can use this project and the following tutorials to implement:
 
 * ### Two-factor authentication using Google authenticator on a different device (using QR codes)
 	* Code snippet:
-```javascript
+```
 ..................
 ```
 
