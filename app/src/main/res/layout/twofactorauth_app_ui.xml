@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:paddingBottom="20dp">
+
+    <LinearLayout
+        android:layout_width="630dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="30dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Where are you setting up the app?"
+                fontPath="fonts/graublau_slab.ttf"
+                android:textStyle="bold"
+                android:textColor="#3f3f3f"
+                android:textSize="10pt"
+                tools:ignore="MissingPrefix" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="false"
+                android:textColor="#7e7e7e"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Authentication apps such as Google Authenticator and Authy"
+                fontPath="fonts/open_sans_light.ttf"
+                android:textSize="6pt"
+                tools:ignore="MissingPrefix" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="false"
+                android:textColor="#7e7e7e"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text=" generate login codes on your phone."
+                fontPath="fonts/open_sans_light.ttf"
+                android:textSize="6pt"
+                tools:ignore="MissingPrefix" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/authAppOnThisPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customborder"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="20dp">
+
+                <ImageView
+                    android:id="@+id/icon1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_sms" />
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/icon1"
+                    android:layout_marginLeft="10dp"
+                    fontPath="fonts/graublau_slab.ttf"
+                    android:textStyle="bold"
+                    android:text="On this phone"
+                    android:textColor="#3f3f3f"
+                    android:textSize="8pt"
+                    tools:ignore="MissingPrefix" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text1"
+                    android:text="If you dont have an authentication app, you need to download one"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/icon1"
+                    android:paddingRight="20dp"
+                    android:singleLine="false"
+                    fontPath="fonts/open_sans_light.ttf"
+                    android:textSize="5.5pt"
+                    tools:ignore="MissingPrefix" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/authAppOnOtherDevice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/customborder"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="20dp">
+
+                <ImageView
+                    android:id="@+id/icon2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_qr" />
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/icon2"
+                    android:layout_marginLeft="15dp"
+                    android:text="On a different device"
+                    android:textStyle="bold"
+                    fontPath="fonts/open_sans_regular.ttf"
+                    android:textColor="#3f3f3f"
+                    android:textSize="7pt"
+                    tools:ignore="MissingPrefix" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text2"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/icon2"
+                    android:paddingRight="20dp"
+                    android:singleLine="false"
+                    android:textColor="#7e7e7e"
+                    fontPath="fonts/open_sans_light.ttf"
+                    android:text="It's best to setup the app on the device that you normally use to access AdsChain"
+                    android:textSize="5.5pt"
+                    tools:ignore="MissingPrefix" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:paddingBottom="20dp">
+
+    <LinearLayout
+        android:layout_width="630dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="30dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#3f3f3f"
+                android:text="Choose a security method"
+                fontPath="fonts/graublau_slab.ttf"
+                android:textSize="10pt"
+                tools:ignore="MissingPrefix" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#7e7e7e"
+                fontPath="fonts/open_sans_light.ttf"
+                android:text="You enabled two-factor authentication on this account."
+                android:textSize="6pt"
+                tools:ignore="MissingPrefix" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/smsOptionLyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customborder"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="20dp">
+
+                <ImageView
+                    android:id="@+id/icon1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_sms" />
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/icon1"
+                    android:layout_marginLeft="10dp"
+                    fontPath="fonts/graublau_slab.ttf"
+                    android:textStyle="bold"
+                    android:text="Text Message"
+                    android:textColor="#3f3f3f"
+                    android:textSize="8pt"
+                    tools:ignore="MissingPrefix" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text1"
+                    android:layout_marginLeft="15dp"
+                    android:paddingRight="20dp"
+                    android:textColor="#7e7e7e"
+                    android:layout_toRightOf="@id/icon1"
+                    android:text="We'll send a code to -216***1200 to get you set up."
+                    android:singleLine="false"
+                    fontPath="fonts/open_sans_light.ttf"
+                    android:textSize="5.5pt"
+                    tools:ignore="MissingPrefix" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/authAppOptionLyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/customborder"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="20dp">
+
+                <ImageView
+                    android:id="@+id/icon2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_qr" />
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/icon2"
+                    android:layout_marginLeft="15dp"
+                    fontPath="fonts/graublau_slab.ttf"
+                    android:textStyle="bold"
+                    android:textColor="#3f3f3f"
+                    android:textSize="8pt"
+                    tools:ignore="MissingPrefix"
+                    android:text="Authentication app"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text2"
+                    android:layout_marginLeft="15dp"
+                    android:paddingRight="20dp"
+                    android:layout_toRightOf="@id/icon2"
+                    android:textColor="#7e7e7e"
+                    android:singleLine="false"
+                    fontPath="fonts/open_sans_light.ttf"
+                    android:textSize="5.5pt"
+                    tools:ignore="MissingPrefix"
+                    android:text="Set up an app such as Google authenticator or Authy to generate login code"
+ />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

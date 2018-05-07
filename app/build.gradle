@@ -22,7 +22,33 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation 'com.android.support:design:27.1.1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    // expandable layout
+    implementation 'com.github.aakira:expandable-layout:1.6.0@aar'
+
+    // firebase core
+    implementation 'com.google.firebase:firebase-core:11.8.0'
+    // firebase authentification
+    implementation 'com.google.firebase:firebase-auth:11.8.0'
+    // firebase database
+    implementation 'com.google.firebase:firebase-database:11.8.0'
+    // to deserialize/serialize json ibjects returned by LINKEDIN API
+    implementation 'com.google.code.gson:gson:2.8.2'
+    // country code picker
+    implementation 'com.hbb20:ccp:2.2.0'
+
+    // volley
+    implementation 'com.android.volley:volley:1.1.0'
+    // to set imageView src
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    // country code picker
+    implementation 'com.hbb20:ccp:2.2.0'
+    // to deserialize/serialize json ibjects returned by Authy
+    implementation 'com.google.code.gson:gson:2.8.2'
 }
+
+apply plugin: 'com.google.gms.google-services'

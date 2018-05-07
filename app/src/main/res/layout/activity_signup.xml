@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/signupHeaderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Signup ..."
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:textSize="40dp"/>
+    <!-- form -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_centerVertical="true">
+
+        <EditText
+            android:id="@+id/emailSignupTxt"
+            android:layout_width="match_parent"
+            android:hint=" email"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:paddingLeft="20dp"
+            android:background="@drawable/editextborder"/>
+
+        <EditText
+            android:id="@+id/fullNameTxt"
+            android:layout_width="match_parent"
+            android:hint=" Useuname"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:paddingLeft="20dp"
+            android:background="@drawable/editextborder"/>
+
+        <EditText
+            android:id="@+id/pswSignupTxt"
+            android:layout_width="match_parent"
+            android:hint=" password"
+            android:inputType="textPassword"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:paddingLeft="20dp"
+            android:background="@drawable/editextborder"/>
+        <CheckBox
+            android:id="@+id/enable2FAchkBx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enable two factor authentication on login"
+            android:textSize="7pt"
+            android:layout_marginTop="25dp"/>
+        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/phnNbrLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:ael_expanded="true"
+            app:ael_duration="500"
+            app:ael_orientation="vertical" >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Phone number required :"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/editextborder">
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/countryCodePicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <EditText
+                        android:id="@+id/phoneNumberEdt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Phone number"
+                        android:inputType="number"
+                        android:layout_marginRight="20dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+        <Button
+            fontPath="fonts/graublau_slab.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/button_background"
+            android:onClick="signUp"
+            android:text="Sign up"
+            android:textSize="8pt"
+            android:textStyle="bold"
+            tools:ignore="MissingPrefix" />
+        <TextView
+            android:id="@+id/navToSignin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textSize="8pt"
+            android:textStyle="bold"
+            android:text="Already a member? Signin"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
