@@ -10,6 +10,8 @@ You can use this project and the following tutorials to implement:
 ```
 ..................
 ```
+
+
 	* Screenshot:
 ![2faQr](https://raw.githubusercontent.com/AmalH/Android-2FA-with-Google-authenticator/master/screenshots/2fagoogleAuthenticator1.png)
 	
