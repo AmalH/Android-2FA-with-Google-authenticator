@@ -2,15 +2,12 @@ package amalhichri.androidprojects.com.a2fasample.utils;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
-import android.widget.EditText;
-import android.widget.LinearLayout;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -153,7 +150,7 @@ public class TwoFactoAuthAppDialog extends Dialog {
                                             String uri = "otpauth://totp/AdsChain:" + email + "?secret=" + "811854" + "&issuer=AdsChain";
                                             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
                                             getContext().startActivity(intent);
-                                            /** 4.Ask user for passcode and validate it **/
+                                            /** 4.Ask user for passcode and validate it
                                             AlertDialog.Builder alertDialog = new AlertDialog.Builder(getContext());
                                             alertDialog.setTitle("Validate security code");
                                             alertDialog.setMessage("Enter the code you received in sms");
@@ -167,7 +164,7 @@ public class TwoFactoAuthAppDialog extends Dialog {
                                             alertDialog.setPositiveButton("Validate",
                                                     new DialogInterface.OnClickListener() {
                                                         public void onClick(DialogInterface dialog, int which) {
-                                                            /** call authy api to validate code provided by the user **/
+                                                            /** call authy api to validate code provided by the user
                                                             Statics.validateSecurityCode(input.getText().toString(),addedUserId,getContext());
                                                         }
                                                     });
@@ -178,7 +175,7 @@ public class TwoFactoAuthAppDialog extends Dialog {
                                                             dialog.cancel();
                                                         }
                                                     });
-                                            alertDialog.show();
+                                            alertDialog.show();**/
                                         } catch (JSONException e) {
                                             e.printStackTrace();
                                         }
