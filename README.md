@@ -60,7 +60,8 @@ You can use this project and the following tutorials to implement:
 
 	Tutorial: [Android - Implementing two-step authentication through Google authenticator](https://www.pragmatictheories.tech/android-implementing-two-step-authentication-through-google-authenticator)
 
-![2faOnSameDevice](https://raw.githubusercontent.com/AmalH/Android-2FA-with-Google-authenticator/master/screenshots/2fagoogleAuthenticator2.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/AmalH/Android-2FA-with-Google-authenticator/master/screenshots/2fagoogleAuthenticator2.png"/></p>
 
 	
 ```java
@@ -140,7 +141,8 @@ You can use this project and the following tutorials to implement:
 
 Tutorial: [Android - Implementing two-step authentication through SMS code](https://www.pragmatictheories.tech/android-implementing-two-step-authentication-through-sms-code)
 
-![2faSMS](https://raw.githubusercontent.com/AmalH/Android-2FA-with-Google-authenticator/master/screenshots/2faSmsCode.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/AmalH/Android-2FA-with-Google-authenticator/master/screenshots/2faSmsCode.png"/></p>
 
 ```java
 /*************************************************************************************************
