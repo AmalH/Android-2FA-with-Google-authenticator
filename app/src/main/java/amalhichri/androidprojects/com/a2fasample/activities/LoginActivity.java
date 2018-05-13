@@ -96,27 +96,6 @@ public class LoginActivity extends Activity {
                       });
   }
 
-
-    /*****************************************************************************
-     * * Password recovery
-     * **************************************************************************/
-    public void resetPassword(View v) {
-        if (((EditText)findViewById(R.id.emailLoginTxt)).getText().toString().isEmpty()) {
-            Toast.makeText(getApplicationContext(), "Please provide your email\nto send you password recovery info.", Toast.LENGTH_LONG).show();
-        } else {
-            FirebaseAuth.getInstance().sendPasswordResetEmail(((EditText)findViewById(R.id.emailLoginTxt)).getText().toString())
-                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            if (task.isSuccessful()) {
-                                Toast.makeText(getApplicationContext(), "A password recovery email has been sent to "+((EditText)findViewById(R.id.emailLoginTxt)).getText().toString(), Toast.LENGTH_LONG).show();
-                            } else
-                                Toast.makeText(getApplicationContext(), "No such email KotlinLearn database, please provide your email!", Toast.LENGTH_LONG).show();
-                        }
-                    });
-        }
-    }
-
     /** for calligraphy lib usage **/
     @Override
     protected void attachBaseContext(Context newBase) {
