@@ -68,7 +68,7 @@ public class Statics {
                                 Log.d("Failure",e.getMessage());
                             }
                         });
-                        Toast.makeText(activity, "Successfully signed to AdsChain!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(activity, "Successfully signed to SampleAuth ap!", Toast.LENGTH_LONG).show();
                     }
                 }).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
@@ -85,7 +85,6 @@ public class Statics {
 
     public static void validateSecurityCode(String code, final String userId, final Context context, final EditText codeTxt, final TextView errorTxt){
         String codeValidationUrl="https://api.authy.com/protected/json/verify/"+code+"/"+userId+"?api_key=CCb8fPiHfTdFp332cefjTuRjgMNprVOx";
-        //JSONObject obj = new JSONObject();
         JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.GET,codeValidationUrl,null,
                 new Response.Listener<JSONObject>() {
                     @Override

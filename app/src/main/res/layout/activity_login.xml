@@ -72,7 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="35px"
-            android:text="Not a Chainer yet ? Join now."
+            android:text="Not a member yet ? Join now."
             android:textSize="8.5pt"
             android:textStyle="bold"
             android:textColor="#2a2a2a"

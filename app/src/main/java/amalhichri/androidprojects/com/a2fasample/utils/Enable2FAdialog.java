@@ -69,9 +69,8 @@ public class Enable2FAdialog extends Dialog {
                                 + "&user[country_code]=" + countryCode + "&api_key=CCb8fPiHfTdFp332cefjTuRjgMNprVOx";
 
                         /** 2.Add the user to the Authy API **/
-                        JSONObject obj = new JSONObject();
                         // post call for Authy api to add a user | response contains the added user's id
-                        JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.POST, addUserUrl, obj,
+                        JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.POST, addUserUrl, null,
                                 new Response.Listener<JSONObject>() {
                                     @Override
                                     public void onResponse(JSONObject response) {
@@ -128,9 +127,8 @@ public class Enable2FAdialog extends Dialog {
 
     private void sendSecurityCodeTo(final String userId) {
 
-        JSONObject obj = new JSONObject();
         String getCodeSMS = "https://api.authy.com/protected/json/sms/" + userId + "?api_key=CCb8fPiHfTdFp332cefjTuRjgMNprVOx&force=true";
-        JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.GET, getCodeSMS, obj,
+        JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.GET, getCodeSMS, null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {

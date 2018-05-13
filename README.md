@@ -21,8 +21,7 @@ You can use this project and the following tutorials to implement:
         qrCodeCallUrl="https://api.authy.com/protected/json/users/"+userId+"/secret?api_key=CCb8fPiHfTdFp332cefjTuRjgMNprVOx";
 
         /** call authy api to get qr code **/
-        JSONObject obj = new JSONObject();
-        JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.POST,qrCodeCallUrl,obj,
+        JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.POST,qrCodeCallUrl,null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
@@ -87,9 +86,8 @@ You can use this project and the following tutorials to implement:
                                 +"&user[country_code]="+countryCode+"&api_key=CCb8fPiHfTdFp332cefjTuRjgMNprVOx";
 
                         /** 2.Add the user to the Authy API **/
-                        JSONObject obj = new JSONObject();
                         // post call for Authy api to add a user | response contains the added user's id
-                        JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.POST,addUserUrl,obj,
+                        JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.POST,addUserUrl,null,
                                 new Response.Listener<JSONObject>() {
                                     @Override
                                     public void onResponse(JSONObject response) {
@@ -167,9 +165,8 @@ Tutorial: [Android - Implementing two-step authentication through SMS code](http
                                 + "&user[country_code]=" + countryCode + "&api_key=CCb8fPiHfTdFp332cefjTuRjgMNprVOx";
 
                         /** 2.Add the user to the Authy API **/
-                        JSONObject obj = new JSONObject();
                         // post call for Authy api to add a user | response contains the added user's id
-                        JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.POST, addUserUrl, obj,
+                        JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.POST, addUserUrl, null,
                                 new Response.Listener<JSONObject>() {
                                     @Override
                                     public void onResponse(JSONObject response) {

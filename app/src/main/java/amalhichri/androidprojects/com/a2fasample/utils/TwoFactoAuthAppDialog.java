@@ -70,9 +70,8 @@ public class TwoFactoAuthAppDialog extends Dialog {
                                 +"&user[country_code]="+countryCode+"&api_key=CCb8fPiHfTdFp332cefjTuRjgMNprVOx";
 
                         /** 2.Add the user to the Authy API **/
-                        JSONObject obj = new JSONObject();
                         // post call for Authy api to add a user | response contains the added user's id
-                        JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.POST,addUserUrl,obj,
+                        JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.POST,addUserUrl,null,
                                 new Response.Listener<JSONObject>() {
                                     @Override
                                     public void onResponse(JSONObject response) {
@@ -124,8 +123,6 @@ public class TwoFactoAuthAppDialog extends Dialog {
                         /** 1.Get user's creds! phone number included.. **/
                         email = (dataSnapshot.getValue(User.class)).getEmailAddress();
                         username = (dataSnapshot.getValue(User.class)).getFirstName()+" "+(dataSnapshot.getValue(User.class)).getLastName();
-                        // password= (dataSnapshot.getValue(User.class)).getPassword();
-                        // password= (dataSnapshot.getValue(User.class)).getPassword();
                         phoneNumber = (dataSnapshot.getValue(User.class)).getPhoneNumber();
                         countryCode = (dataSnapshot.getValue(User.class)).getPhoneCountryCode();
                         addUserUrl  = "https://api.authy.com/protected/json/users/new?user[email]="+email
@@ -133,9 +130,8 @@ public class TwoFactoAuthAppDialog extends Dialog {
                                 +"&user[country_code]="+countryCode+"&api_key=CCb8fPiHfTdFp332cefjTuRjgMNprVOx";
 
                         /** 2.Add the user to the Authy API **/
-                        JSONObject obj = new JSONObject();
                         // post call for Authy api to add a user | response contains the added user's id
-                        JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.POST,addUserUrl,obj,
+                        JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.POST,addUserUrl,null,
                                 new Response.Listener<JSONObject>() {
                                     @Override
                                     public void onResponse(JSONObject response) {
