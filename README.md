@@ -77,8 +77,6 @@ You can use this project and the following tutorials to implement:
                         /** 1.Get user's creds! phone number included.. **/
                         email = (dataSnapshot.getValue(User.class)).getEmailAddress();
                         username = (dataSnapshot.getValue(User.class)).getFirstName()+" "+(dataSnapshot.getValue(User.class)).getLastName();
-                        // password= (dataSnapshot.getValue(User.class)).getPassword();
-                        // password= (dataSnapshot.getValue(User.class)).getPassword();
                         phoneNumber = (dataSnapshot.getValue(User.class)).getPhoneNumber();
                         countryCode = (dataSnapshot.getValue(User.class)).getPhoneCountryCode();
                         addUserUrl  = "https://api.authy.com/protected/json/users/new?user[email]="+email
@@ -157,7 +155,6 @@ Tutorial: [Android - Implementing two-step authentication through SMS code](http
                         /** 1.Get user's creds! phone number included.. **/
                         email = (dataSnapshot.getValue(User.class)).getEmailAddress();
                         username = (dataSnapshot.getValue(User.class)).getFirstName() + " " + (dataSnapshot.getValue(User.class)).getLastName();
-                        // password= (dataSnapshot.getValue(User.class)).getPassword();
                         phoneNumber = (dataSnapshot.getValue(User.class)).getPhoneNumber();
                         countryCode = (dataSnapshot.getValue(User.class)).getPhoneCountryCode();
                         addUserUrl = "https://api.authy.com/protected/json/users/new?user[email]=" + email
@@ -175,7 +172,6 @@ Tutorial: [Android - Implementing two-step authentication through SMS code](http
                                             /** get the returned id **/
                                             JsonObject addedUser = gson.fromJson(response.getString("user"), JsonObject.class);
                                             addedUserId = (addedUser.get("id")).getAsString();
-                                            // Toast.makeText(getApplicationContext(), "Res: "+addedUserId, Toast.LENGTH_LONG).show();
                                             /** 3.call the Authy API to send a code through sms **/
                                             /** 4.call the Authy API to validate code provided by user [embedded in sendSecurityCodeTo method **/
                                             sendSecurityCodeTo(addedUserId);
